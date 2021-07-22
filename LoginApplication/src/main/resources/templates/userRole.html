@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments :: html_head(pageTitle='Login')" />
+<body>
+<div class="container text-center">
+	
+	
+	
+		<div sec:authorize="isAuthenticated()" class="text-center p-3">
+	<form action="/userRole" style="max-width: 400px; margin: 0 auto;">
+	<div class="border border-secondary rounded p-3">
+		<div><p>Role As</p></div>
+		<div>
+		<input type="radio" id="seller" name="role"  value="1" checked="true"/>&nbsp<label for="seller">Seller</label>
+		<input type="radio" id="consumer" name="role" value="2" />&nbsp<label for="consumer">Consumer</label>
+		</div>
+		<div>
+			<p><input type="submit" value="Continue" class="btn btn-primary" /></p>
+		</div>
+	</div>
+	</form>
+	</div>
+	
+</div>
+</body>
+</html>

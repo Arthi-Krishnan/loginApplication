@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head th:replace="fragments :: html_head(pageTitle='Login')" />
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+.a
+{
+display:inline-block;
+
+
+}
+
+</style>
+<body>
+
+<div class="a">
+	<h6 th:text="'Welcome '+${role}+'. '"></h6></div>
+	<div class="a">
+	<h6><a th:href="@{/logOut}">Logout</a></h6>
+	</div>
+	<div class="a">
+	<h6 th:text="'<'+${userName}+'>'"></h6>
+	</div>
+	
+	<h6><a th:href="@{/uRolePage}">Edit Role</a></h6>
+</body>
+</html>
