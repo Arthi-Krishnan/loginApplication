@@ -13,7 +13,7 @@ import com.example.entity.User;
 import com.example.repository.UserRepository;
 @Service
 public class UserService { 
-	
+	 
 	  @Autowired
 	  private UserRepository repo;
 	     
